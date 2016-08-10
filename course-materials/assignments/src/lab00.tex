@@ -1,0 +1,117 @@
+\documentclass[12pt]{article}
+\usepackage{listings}
+\usepackage{color}
+\textwidth=7in
+\textheight=9.5in
+\topmargin=-1in
+\headheight=0in
+\headsep=.5in
+\hoffset  -.85in
+
+\definecolor{mygray}{rgb}{0.4,0.4,0.4}
+\definecolor{mygreen}{rgb}{0,0.8,0.6}
+\definecolor{myorange}{rgb}{1.0,0.4,0}
+
+\lstset{
+basicstyle=\footnotesize\sffamily\color{black},
+commentstyle=\color{mygray},
+frame=single,
+numbers=left,
+numbersep=5pt,
+numberstyle=\tiny\color{mygray},
+keywordstyle=\color{mygreen},
+showspaces=false,
+showstringspaces=false,
+stringstyle=\color{myorange},
+tabsize=2
+}
+
+\pagestyle{empty}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\begin{document}
+
+\begin{center}
+{\bf Lab 0: Using Git and the Command Line
+}
+\end{center}
+
+\setlength{\unitlength}{1in}
+
+\begin{picture}(6,.1) 
+\put(0,0) {\line(1,0){6.25}}         
+\end{picture}
+
+\renewcommand{\arraystretch}{2}
+\setlength{\tabcolsep}{6pt} % General space between cols (6pt standard)
+\renewcommand{\arraystretch}{.5} % General space between rows (1 standard)
+
+\vskip.15in
+\noindent\textbf{Instructions:} In this lab we will get use to using the Git (via GitHub) with a Command Line Interface (CLI) environment.  You will create a GitHub account, fork this classes repository, do some basic bug fixing, and then submit via GitHub.
+\begin{enumerate}
+\item Visit http://www.github.com and create an account if you do not already have one.
+\item Email me your account name.  My email is pwest@csuniv.edu.
+\item Once I email you back you should be part of the CSU-CS organization and have access to the csci-315-fall-2105 repository.
+\item Fork the repository.
+\item On you local machine checkout the repository: \$ git clone $<$url to your repository$>$
+\item Fix the bugs in lab00 (see below for more instructions.)
+\item Run some tests to confirm everything is passing.
+\item Mark your changes for commit: \$ git add helloworld.cpp main.cpp
+\item Commit your changes: \$ git commit
+\item Push your changes so I have access to them: \$ git push
+\end{enumerate}
+
+This lab00 requires a function in helloworld.cpp:
+\begin{lstlisting}[language=C++]{Name=test2}
+/* This function shall return the string "Hello World!" */
+string getHelloMessage();
+\end{lstlisting}
+
+In addition, write a main.cpp file that takes an integer $i$ as a parameter and prints the return of getHelloMessage() $i$ times.
+
+\vskip.15in
+\noindent\textbf{Example Input 1:} \\
+\$ ./helloworld 2
+
+\vskip.15in
+\noindent\textbf{Example Output 1:} \\
+Hello World! \\
+Hello World!
+
+\vskip.15in
+\noindent\textbf{Example Input 2:} \\
+\$ ./helloworld -1
+
+\vskip.15in
+\noindent\textbf{Example Output 2:}
+
+\vskip.15in
+\noindent\textbf{Example Input 3:} \\
+\$ ./helloworld 1
+
+\vskip.15in
+\noindent\textbf{Example Output 3:} \\
+Hello World!
+
+\vskip.15in
+\noindent\textbf{How to test:} \\
+Some tests have been written, do a \$ make test to see the results of testing.
+
+\vskip.15in
+\noindent\textbf{How to turn in:} \\
+Turn in via GitHub.  Ensure the file(s) are in your lab00 directory and then:
+\begin{itemize}
+\item \$ git add $<$files$>$
+\item \$ git commit 
+\item \$ git push
+\end{itemize}
+
+\vskip.15in
+\noindent\textbf{Due Date:}
+August 26, 2015 2359
+
+\vskip.15in
+\noindent\textbf{Teamwork:} No teamwork, your work must be your own.
+
+\end{document}
