@@ -1,6 +1,6 @@
 DEPS=helloworld.hpp
 OBJS=helloworld.o
-CFLAGS=-O2
+CFLAGS=-O2 -I src/
 
 %.o: %.cpp $(DEPS)
 	g++ -c -o $@ $< $(CFLAGS)
@@ -17,4 +17,4 @@ test: all
 
 clean:
 	rm -rf *.o helloworld helloworld-test test-runner.cpp
-	cd cov ; make cov-clean
+	#cd cov ; make cov-clean
