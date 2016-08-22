@@ -19,11 +19,9 @@ std::string exec(char* cmd) {
 
 class MyTestSuite1 : public CxxTest::TestSuite {
     public:
-        void testOutput() {
-            std::string result = exec((char*)"./helloworld 0");
-            TS_ASSERT_EQUALS(result, "");
-            result = exec((char*)"./helloworld 2");
-            TS_ASSERT_EQUALS(result, "Hello World!\nHello World!\n");
+        void testHelloWorld(void) {
+            TS_ASSERT_EQUALS(getHelloMessage(), "Hello World!");
         }
+
 };
 
