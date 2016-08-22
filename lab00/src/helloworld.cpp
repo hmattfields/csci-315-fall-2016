@@ -3,5 +3,5 @@
 using namespace std;
 
 string getHelloMessage() {
-    return "Hello Wrld!";
+    return "Hello World!";
 }

@@ -11,7 +11,7 @@ int main(int argc, char *argv[]) {
     }
     int num = atoi(argv[1]);
 
-    for (int i = 1; i < num; i++) {
+    for (int i = 0; i < num; i++) {
         cout << getHelloMessage() << "\n";
     }
 }
